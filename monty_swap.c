@@ -2,7 +2,7 @@
 
 /**
 * monty_swap - function that swaps the top two elements of the stack
-* @head: head of stack.
+* @head: head of stack
 * @line_counter: line count
 * Return: nothing (void)
 */
