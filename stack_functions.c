@@ -2,7 +2,7 @@
 
 /**
 * free_function - function that frees a doubly linked list using
- a temp file
+* a temp file
 * @head: pointer to the first element of the stack
 * Return: nothing
 */
