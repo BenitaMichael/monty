@@ -11,5 +11,5 @@ void monty_stack(stack_t **head, unsigned int line_count)
 {
 	(void)head;
 	(void)line_count;
-	func.lifi = 0;
+	func.fl = 0;
 }

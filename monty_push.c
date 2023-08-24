@@ -3,14 +3,14 @@
 /**
 * push_function - function that adds node to the
 * stack at the end
-* @head: double head pointer to the stack
+* @head: pointer to the head stack
 * @line_count: line count
 * Return: nothing (void)
 */
 void push_function(stack_t **head, unsigned int line_count)
 {
 	int a;
-	int index = 0, flag = 0;
+	int index = 0, f_flag = 0;
 
 	if (func.arg)
 	{
@@ -19,9 +19,9 @@ void push_function(stack_t **head, unsigned int line_count)
 		for (; func.arg[index] != '\0'; index++)
 		{
 			if (func.arg[index] > 57 || func.arg[index] < 48)
-				flag = 1;
+				f_flag = 1;
 		}
-		if (flag == 1)
+		if (f_flag == 1)
 		{ fprintf(stderr, "L%d: usage: push integer\n", line_count);
 			fclose(func.file);
 			free(func.content);
@@ -36,7 +36,7 @@ void push_function(stack_t **head, unsigned int line_count)
 		exit(EXIT_FAILURE);
 	}
 	a = atoi(func.arg);
-	if (func.lifi == 0)
+	if (func.fl == 0)
 		new_node(head, a);
 	else
 		add_queue(head, a);

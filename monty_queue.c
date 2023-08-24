@@ -48,5 +48,5 @@ void monty_queue(stack_t **head, unsigned int line_count)
 {
 	(void)head;
 	(void)line_count;
-	func.lifi = 1;
+	func.fl = 1;
 }

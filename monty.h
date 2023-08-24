@@ -1,3 +1,7 @@
+#ifndef _GNU_SOURCE
+#define _GNU_SOURCE
+#endif
+
 #ifndef MONTY_H
 #define MONTY_H
 
@@ -41,19 +45,19 @@ typedef struct instruction_s
 } instruction_t;
 
 /**
-* struct func_t -structure containing variables -args, 
-* file, line content
+* struct func_t -structure including arguments, contents of file
+* file and flag
 * @arg: value
-* @file: pointer to monty file
+* @file: monty file
 * @content: file content
-* @lifi: flag change stack <-> queue
-* Description: carries values for each function in the program
+* @fl: file flag
+* Description: carries values for each monty function
 */
 typedef struct func_t
 {
-	char *arg;
 	FILE *file;
-	int lifi;
+	char *arg;
+	int fl;
 	char *content;
 }  func_t;
 extern func_t func;
@@ -64,7 +68,6 @@ void pall_function(stack_t **head, unsigned int line_count);
 
 /*Task 1*/
 void monty_pint(stack_t **head, unsigned int line_counter);
-
 
 /*Task 2*/
 void monty_pop(stack_t **head, unsigned int line_counter);
@@ -97,10 +100,10 @@ void monty_pchar(stack_t **head, unsigned int line_count);
 void monty_pstr(stack_t **head, unsigned int line_count);
 
 /*Task 13*/
-void monty_rotl(stack_t **head,  __attribute__((unused)) unsigned int line_count);
+void monty_rotl(stack_t **head,  __attribute__((unused)) unsigned int count);
 
 /*Task 14*/
-void monty_rotr(stack_t **head, __attribute__((unused)) unsigned int line_count);
+void monty_rotr(stack_t **head, __attribute__((unused)) unsigned int count);
 
 /*Task 15*/
 void monty_queue(stack_t **head, unsigned int line_count);

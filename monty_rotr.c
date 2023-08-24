@@ -7,7 +7,7 @@
 * @line_count: line count
 * Return: nothing (void)
 */
-void monty_rotr(stack_t **head, __attribute__((unused)) unsigned int line_count)
+void monty_rotr(stack_t **head, __attribute__((unused)) unsigned int count)
 {
 	stack_t *dub;
 
