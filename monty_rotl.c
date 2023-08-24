@@ -4,10 +4,10 @@
 * monty_rotl- function that rotates the stack to the top : The top element of the stack
 * becomes the last one, and the second top element of the stack becomes the first one
 * @head: head of the stack
-* @count: line count
+* @line_count: line count
 * Return: nothing (void)
 */
-void monty_rotl(stack_t **head,  __attribute__((unused)) unsigned int count)
+void monty_rotl(stack_t **head,  __attribute__((unused)) unsigned int line_count)
 {
 	stack_t *temp = *head, *aux;
 

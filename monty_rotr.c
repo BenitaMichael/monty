@@ -4,10 +4,10 @@
 * monty_rotr - function that rotates the stack to the bottom
 * The last element of the stack becomes the top element of the stack
 * @head: head of the stack
-* @count: line count
+* @line_count: line count
 * Return: nothing (void)
 */
-void monty_rotr(stack_t **head, __attribute__((unused)) unsigned int count)
+void monty_rotr(stack_t **head, __attribute__((unused)) unsigned int line_count)
 {
 	stack_t *dub;
 
