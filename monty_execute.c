@@ -19,6 +19,9 @@ int exec(char *content, stack_t **stack, unsigned int counter, FILE *file)
 				{"nop", monty_nop},
 				{"sub", monty_sub}, {"div", monty_div},
 				{"mul", monty_mul}, {"mod", monty_mod},
+				{"pchar", monty_pchar}, {"pstr", monty_pstr},
+				{"rotl", monty_rotl}, {"rotr", monty_rotr},
+				{"queue", monty_queue}, {"stack", monty_stack},
 				{NULL, NULL}
 				};
 	char *operation;

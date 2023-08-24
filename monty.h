@@ -59,7 +59,7 @@ typedef struct func_t
 extern func_t func;
 
 /*Task 0*/
-void push_function(stack_t **head, unsigned int counter);
+void push_function(stack_t **head, unsigned int line_count);
 void pall_function(stack_t **head, unsigned int line_count);
 
 /*Task 1*/
@@ -88,6 +88,22 @@ void monty_mul(stack_t **head, unsigned int counter);
 
 /*Task 9*/
 void monty_mod(stack_t **head, unsigned int counter);
+
+/*Task 11*/
+void monty_pchar(stack_t **head, unsigned int count);
+
+/*Task 12*/
+void monty_pstr(stack_t **head, unsigned int count);
+
+/*Task 13*/
+void monty_rotl(stack_t **head,  __attribute__((unused)) unsigned int count);
+
+/*Task 14*/
+void monty_rotr(stack_t **head, __attribute__((unused)) unsigned int count);
+
+/*Task 15*/
+void monty_queue(stack_t **head, unsigned int count);
+void monty_stack(stack_t **head, unsigned int count);
 
 void add_queue(stack_t **head, int new);
 /*frees the stack*/

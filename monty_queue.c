@@ -36,3 +36,17 @@ void add_queue(stack_t **head, int new)
 	}
 }
 
+
+/**
+* monty_queue - function that sets the format of the
+* data to a queue (FIFO)
+* @head: head of queue
+* @count: line count
+* Return: nothing (void)
+*/
+void monty_queue(stack_t **head, unsigned int count)
+{
+	(void)head;
+	(void)count;
+	func.lifi = 1;
+}
