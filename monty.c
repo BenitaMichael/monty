@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 {
 	char *content;
 	FILE *file;
-	unsigned int counter = 0;
+	unsigned int line_counter = 0;
 	size_t size = 0;
 	ssize_t read_line = 1;
 	stack_t *stack = NULL;
@@ -37,10 +37,10 @@ int main(int argc, char *argv[])
 		content = NULL;
 		read_line = getline(&content, &size, file);
 		func.content = content;
-		counter++;
+		line_counter++;
 		if (read_line > 0)
 		{
-			exec(content, &stack, counter, file);
+			exec(content, &stack, line_counter, file);
 		}
 		free(content);
 	}

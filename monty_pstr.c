@@ -4,13 +4,13 @@
 * monty_pstr - function that prints the string starting at
 * the top of the stack followed by a new
 * @head: head of stack
-* @count: line count
+* @line_count: line count
 * Return: nothing (void)
 */
-void monty_pstr(stack_t **head, unsigned int count)
+void monty_pstr(stack_t **head, unsigned int line_count)
 {
 	stack_t *ptr;
-	(void)count;
+	(void)line_count;
 
 	ptr = *head;
 	while (ptr)

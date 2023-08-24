@@ -3,12 +3,12 @@
 /**
 * exec - function that executes all monty functions
 * @stack: head stack
-* @counter: line count
+* @line_counter: line count
 * @file: pointer to monty file stream
 * @content: line content
 * Return: nothing (void)
 */
-int exec(char *content, stack_t **stack, unsigned int counter, FILE *file)
+int exec(char *content, stack_t **stack, unsigned int line_counter, FILE *file)
 {
 	instruction_t opt[] = {
 				{"push", push_function}, {"pall", pall_function},
@@ -34,13 +34,13 @@ int exec(char *content, stack_t **stack, unsigned int counter, FILE *file)
 	while (opt[i].opcode && operation)
 	{
 		if (strcmp(operation, opt[i].opcode) == 0)
-		{	opt[i].f(stack, counter);
+		{	opt[i].f(stack, line_counter);
 			return (0);
 		}
 		i++;
 	}
 	if (operation && opt[i].opcode == NULL)
-	{ fprintf(stderr, "L%d: unknown instruction %s\n", counter, operation);
+	{ fprintf(stderr, "L%d: unknown instruction %s\n", line_counter, operation);
 		fclose(file);
 		free(content);
 		free_function(*stack);

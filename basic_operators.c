@@ -3,10 +3,10 @@
 /**
 * monty_add - function that adds the top two elements of the stack
 * @head:pointer to head pointer
-* @counter: line count
+* @line_counter: line count
 * Return: nothing (void)
 */
-void monty_add(stack_t **head, unsigned int counter)
+void monty_add(stack_t **head, unsigned int line_counter)
 {
 	stack_t *ptr;
 	int tmp;
@@ -20,7 +20,7 @@ void monty_add(stack_t **head, unsigned int counter)
 	}
 	if (len < 2)
 	{
-		fprintf(stderr, "L%d: can't add, stack too short\n", counter);
+		fprintf(stderr, "L%d: can't add, stack too short\n", line_counter);
 		fclose(func.file);
 		free(func.content);
 		free_function(*head);
@@ -38,10 +38,10 @@ void monty_add(stack_t **head, unsigned int counter)
 * monty_sub - function that substracts the top element of the stack from the
 * second top element of the stack
 * @head: pointer to the head pointer
-* @counter: line count
+* @line_counter: line count
 * Return: nothing(void)
 */
-void monty_sub(stack_t **head, unsigned int counter)
+void monty_sub(stack_t **head, unsigned int line_counter)
 {
 	stack_t *tmp;
 	int num;
@@ -52,7 +52,7 @@ void monty_sub(stack_t **head, unsigned int counter)
 		tmp = tmp->next;
 	if (num < 2)
 	{
-		fprintf(stderr, "L%d: can't sub, stack too short\n", counter);
+		fprintf(stderr, "L%d: can't sub, stack too short\n", line_counter);
 		fclose(func.file);
 		free(func.content);
 		free_function(*head);
@@ -70,10 +70,10 @@ void monty_sub(stack_t **head, unsigned int counter)
 * monty_div - function that divides the top two elements of
 * the stack
 * @head: double head pointer to the stack
-* @counter: line count
+* @line_counter: line count
 * Return: nothing
 */
-void monty_div(stack_t **head, unsigned int counter)
+void monty_div(stack_t **head, unsigned int line_counter)
 {
 	stack_t *ptr;
 	int tmp;
@@ -87,7 +87,7 @@ void monty_div(stack_t **head, unsigned int counter)
 	}
 	if (len < 2)
 	{
-		fprintf(stderr, "L%d: can't div, stack too short\n", counter);
+		fprintf(stderr, "L%d: can't div, stack too short\n", line_counter);
 		fclose(func.file);
 		free(func.content);
 		free_function(*head);
@@ -96,7 +96,7 @@ void monty_div(stack_t **head, unsigned int counter)
 	ptr = *head;
 	if (ptr->n == 0)
 	{
-		fprintf(stderr, "L%d: division by zero\n", counter);
+		fprintf(stderr, "L%d: division by zero\n", line_counter);
 		fclose(func.file);
 		free(func.content);
 		free_function(*head);
@@ -113,10 +113,10 @@ void monty_div(stack_t **head, unsigned int counter)
 * monty_mul - function that multiplies the top two elements of
 * the stack
 * @head: double head pointer to the stack
-* @counter: line count
+* @line_counter: line count
 * Return: nothing (void)
 */
-void monty_mul(stack_t **head, unsigned int counter)
+void monty_mul(stack_t **head, unsigned int line_counter)
 {
 	stack_t *ptr;
 	int tmp;
@@ -130,7 +130,7 @@ void monty_mul(stack_t **head, unsigned int counter)
 	}
 	if (len < 2)
 	{
-		fprintf(stderr, "L%d: can't mul, stack too short\n", counter);
+		fprintf(stderr, "L%d: can't mul, stack too short\n", line_counter);
 		fclose(func.file);
 		free(func.content);
 		free_function(*head);
@@ -148,10 +148,10 @@ void monty_mul(stack_t **head, unsigned int counter)
 * monty_mod - function that computes the remainder of the division
 * of the second top element of the stack by the top element of the stack
 * @head: double head pointer to the stack
-* @counter: line count
+* @line_counter: line count
 * Return: nothing (void)
 */
-void monty_mod(stack_t **head, unsigned int counter)
+void monty_mod(stack_t **head, unsigned int line_counter)
 {
 	stack_t *ptr;
 	int tmp;
@@ -165,7 +165,7 @@ void monty_mod(stack_t **head, unsigned int counter)
 	}
 	if (len < 2)
 	{
-		fprintf(stderr, "L%d: can't mod, stack too short\n", counter);
+		fprintf(stderr, "L%d: can't mod, stack too short\n", line_counter);
 		fclose(func.file);
 		free(func.content);
 		free_function(*head);
@@ -174,7 +174,7 @@ void monty_mod(stack_t **head, unsigned int counter)
 	ptr = *head;
 	if (ptr->n == 0)
 	{
-		fprintf(stderr, "L%d: division by zero\n", counter);
+		fprintf(stderr, "L%d: division by zero\n", line_counter);
 		fclose(func.file);
 		free(func.content);
 		free_function(*head);

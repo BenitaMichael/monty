@@ -63,47 +63,48 @@ void push_function(stack_t **head, unsigned int line_count);
 void pall_function(stack_t **head, unsigned int line_count);
 
 /*Task 1*/
-void monty_pint(stack_t **head, unsigned int counter);
+void monty_pint(stack_t **head, unsigned int line_counter);
+
 
 /*Task 2*/
-void monty_pop(stack_t **head, unsigned int counter);
+void monty_pop(stack_t **head, unsigned int line_counter);
 
 /*Task 3*/
-void monty_swap(stack_t **head, unsigned int counter);
+void monty_swap(stack_t **head, unsigned int line_counter);
 
 /*Task 4*/
-void monty_add(stack_t **head, unsigned int counter);
+void monty_add(stack_t **head, unsigned int line_counter);
 
 /*Task 5*/
-void monty_nop(stack_t **head, unsigned int counter);
+void monty_nop(stack_t **head, unsigned int line_counter);
 
 /*Task 6*/
-void monty_sub(stack_t **head, unsigned int counter);
+void monty_sub(stack_t **head, unsigned int line_counter);
 
 /*Task 7*/
-void monty_div(stack_t **head, unsigned int counter);
+void monty_div(stack_t **head, unsigned int line_counter);
 
 /*Task 8*/
-void monty_mul(stack_t **head, unsigned int counter);
+void monty_mul(stack_t **head, unsigned int line_counter);
 
 /*Task 9*/
-void monty_mod(stack_t **head, unsigned int counter);
+void monty_mod(stack_t **head, unsigned int line_counter);
 
 /*Task 11*/
-void monty_pchar(stack_t **head, unsigned int count);
+void monty_pchar(stack_t **head, unsigned int line_count);
 
 /*Task 12*/
-void monty_pstr(stack_t **head, unsigned int count);
+void monty_pstr(stack_t **head, unsigned int line_count);
 
 /*Task 13*/
-void monty_rotl(stack_t **head,  __attribute__((unused)) unsigned int count);
+void monty_rotl(stack_t **head,  __attribute__((unused)) unsigned int line_count);
 
 /*Task 14*/
-void monty_rotr(stack_t **head, __attribute__((unused)) unsigned int count);
+void monty_rotr(stack_t **head, __attribute__((unused)) unsigned int line_count);
 
 /*Task 15*/
-void monty_queue(stack_t **head, unsigned int count);
-void monty_stack(stack_t **head, unsigned int count);
+void monty_queue(stack_t **head, unsigned int line_count);
+void monty_stack(stack_t **head, unsigned int line_count);
 
 void add_queue(stack_t **head, int new);
 /*frees the stack*/
@@ -111,6 +112,6 @@ void free_function(stack_t *head);
 void new_node(stack_t **head, int new);
 
 /*Executes the opcodes*/
-int exec(char *content, stack_t **stack, unsigned int counter, FILE *file);
+int exec(char *content, stack_t **stack, unsigned int line_counter, FILE *file);
 
 #endif
