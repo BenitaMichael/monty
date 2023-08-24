@@ -53,13 +53,14 @@ typedef struct func_t
 {
 	char *arg;
 	FILE *file;
-    int lifi;
+	int lifi;
 	char *content;
 }  func_t;
 extern func_t func;
 
 /*Task 0*/
 void push_function(stack_t **head, unsigned int counter);
+void pall_function(stack_t **head, unsigned int line_count);
 
 /*Task 1*/
 void monty_pint(stack_t **head, unsigned int counter);
